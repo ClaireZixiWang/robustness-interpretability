@@ -143,3 +143,8 @@ def save_image(im, path):
         im = format_np_output(im)
         im = Image.fromarray(im)
     im.save(path)
+
+
+def calculate_score(image, grads):
+    score = np.dot(image.numpy().flatten(), grads.flatten())
+    return score
