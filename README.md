@@ -28,6 +28,16 @@ Our experiment design flow is as follows:
 * Adversarially train a robust model
 * Test the robust model on original and adversarial images
 * Compare the four saliency maps and calculate the similarities with input images
+
+
 ## Repo Description
+The main code of our project is the following two files: `Robustness_Interpretability_MNIST_Final.ipynb` and `guided_backprop.py`. `guided_backprop.py` is the helper code that we borrowed from link(https://github.com/utkuozbulak/pytorch-cnn-visualizations) to compute guided backpropagation gradients. `Robustness_Interpretability_MNIST_Final.ipynb` is the main experimentation notebook, where we train two models (naturally and adversarially), generate adversarial images for testing, and compare the saliency maps for different images under different models.
+
+`results` stores the resulting picture maps that we plot during the experiment.
+
+`lenet-non-val.pth` and `lenet-pgd-trained.pth` are the pretrianed Natural LeNet and Adversarially Trained LeNet that we included here in the repo. But the training themselves actually will not take too much time. This inclusion is mostly for the sake of completeness.
+
+`Resnet18_naturally_train.ipynb` and `Robustness_interpretability_cifar10_resent18.ipynb` are notebooks for a next-step experiment on CIFAR10 and ResNet18. It is still very much a next step and is beyond the scope of this project per se. However, we just want to include them here for the convinence of future work.
+
 ## Running the demo
 ## Results
