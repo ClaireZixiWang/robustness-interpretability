@@ -21,7 +21,17 @@ We slightly adated the original Saliency Map method in our projects - we used th
 Moreover, we quantify the "cleaness" of a feature map by computing its inner product with the original picture. This is because in MNIST dataset, both the original images and the saliency maps are gray-scale pictures with black background and white "strokes". So the more a feature map is similar to the original image through inner product, the more we consider it as a "clean" interpretation. Or in other word, the more "interpretable" that model should be.
 #### Robust Models
 We adopted a straight forward Robust Optimization method to train a Robust Model. Specifically, we used images resulting from 7-step PGD attack to adversarially train a Robust Model. We use this Adversarially triained Robust Model to do the following experiments.
-#### Experiment Design
+#### Experiment Set Up
+Our Implementation details are as follows:
+* Model: LeNet with 50 epochs
+* Robust model: PGD with 50 epochs
+* Framework: PyTorch
+* Dataset: MNIST
+* Platform: Google Colab with GPU
+* Libraries: 
+  * Adversarial-attacks-pytorch for adversarial training
+  * Pytorch-cnn-visualizations for guided backpropagation
+
 Our experiment design flow is as follows:
 * Train the model and evaluate on test images, observe the saliency maps
 * Generate adversarial examples and see how the saliency maps change
