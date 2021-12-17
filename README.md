@@ -24,9 +24,10 @@ We adopted a straight forward Robust Optimization method to train a Robust Model
 #### Experiment Set Up
 Our Implementation details are as follows:
 * Model: LeNet with 50 epochs
-* Robust model: PGD with 50 epochs
+* Robust model: 7-step PGD with 50 epochs
 * Framework: PyTorch
 * Dataset: MNIST
+* Adversarial Attack: FGSM Attack
 * Platform: Google Colab with GPU
 * Libraries: 
   * Adversarial-attacks-pytorch for adversarial training
