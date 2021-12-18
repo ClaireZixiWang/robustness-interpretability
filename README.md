@@ -52,3 +52,16 @@ The main code of our project is the following two files: `Robustness_Interpretab
 
 ## Running the demo
 ## Results
+### Naturally Trained Model
+![image](https://user-images.githubusercontent.com/59561588/146620884-b86df0bf-c82e-4b4b-ad1e-59cc6bb83100.png)
+![image](https://user-images.githubusercontent.com/59561588/146621757-0bee7b2f-4d14-4fd4-bba8-7bb43de1ffb8.png)
+
+
+### Adversarially Trained Model
+![image](https://user-images.githubusercontent.com/59561588/146620871-c7ba5057-ee5b-4690-91f3-c62ab27086a0.png)
+![image](https://user-images.githubusercontent.com/59561588/146621764-168d6a83-fabe-4d39-b88d-a04f97c68aa6.png)
+
+
+We can see that the saliency maps for robust model is a lot cleaner than those for natural models. Specifically, for natural models, the saliency maps of natural images looks somewhat like the numbers in the original images, whereas those of adversarial images make almost no sense. On the contrary, for robust models, both natural and adversarial images' saliency maps looks very much like the original numbers. 
+
+We can conclude that there is some degree of correlation between a model's robustness and interpretability. For a stronger support of this correlation, we could quantify the "interpretability" of a model by the calculating the average similarity score between original images and saliency maps among the entire MNIST dataset, and quantitatively analyze the correlation between robustness and interpretability. We could also look at bigger datasets like CIFAR10 and ImageNet and see if a similar result would still hold. For the time limit of this project, we will leave these experiments for future works. 
