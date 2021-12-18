@@ -52,6 +52,7 @@ The main code of our project is the following two files: `Robustness_Interpretab
 `Resnet18_naturally_train.ipynb` and `Robustness_interpretability_cifar10_resent18.ipynb` are notebooks for a next-step experiment on CIFAR10 and ResNet18. It is still very much a next step and is beyond the scope of this project per se. However, we just want to include them here for the convinence of future work.
 
 ## Running the demo
+Clone our repo in local machine or on google colab. In the same folder, run the `Robustness_Interpretability_MNIST_Final.ipynb` notebook.
 ## Results
 ### Naturally Trained Model
 ![image](https://user-images.githubusercontent.com/59561588/146620884-b86df0bf-c82e-4b4b-ad1e-59cc6bb83100.png)
