@@ -3,7 +3,7 @@
 ### Problem Motivation
 Interpretable Machine Learning and Robust Machine Learning are two important fields of studies that aims to make Machine Learning models more reliable and trustworthy, especially in complex high-stake applications such as medicine, automatic vehicle, finance, law, etc. 
 
-While our Machine Learning models have reached very high accuracy, it is still brittle under carefully-constructed adversarial attacks. With some carefully constructed noise added on top, an image that looks almost identical to us human eyes, will suddenly be classified as another picture by a Neural Network, even with very high confidence. This issue has boomed an era of study in Robust Machine Learning, including Robust Optimization(Link), Robust Regularizartion(Link),  Online Defense(Link), all aiming to improve the models' robustness under these adversarial examples. You can read more about this topic in our Midterm Seminar here().
+While our Machine Learning models have reached very high accuracy, it is still brittle under carefully-constructed adversarial attacks. With some carefully constructed noise added on top, an image that looks almost identical to us human eyes, will suddenly be classified as another picture by a Neural Network, even with very high confidence. This issue has boomed an era of study in Robust Machine Learning, including [Robust Optimization](https://arxiv.org/pdf/1706.06083.pdf), [Robust Regularizartion](https://arxiv.org/abs/1807.10272),  [Online Defense](https://arxiv.org/abs/2103.14222), all aiming to improve the models' robustness under these adversarial examples. You can read more about this topic in our [Midterm Seminar Blog](https://medium.com/@zixi-wang/comparing-adversarial-attacks-and-defenses-vision-vs-speech-5e2e0f9f753b).
 ![image](https://user-images.githubusercontent.com/59561588/146614009-dc0914f5-b52a-4e82-9067-8d0c89902ec1.png)
 
 The Neural Network's vulnerability under adversarial attacks brings up another problem - in fact, we don't know what our models are doing when they are making decisions. We don't know why adversaries exists and what our models are learning and seeing when facing these adversaries. This brings up the other topic of our project - Interpretable Machine Learning. We would like to know what the models are doing for the sake of debugging, explaining to stakeholders, and taking accountabilities. Moreover, we just want to make sure our model is reliable, right?
@@ -30,8 +30,8 @@ Our Implementation details are as follows:
 * Adversarial Attack: FGSM Attack
 * Platform: Google Colab with GPU
 * Libraries: 
-  * Adversarial-attacks-pytorch for adversarial training
-  * Pytorch-cnn-visualizations for guided backpropagation
+  * [Adversarial-attacks-pytorch](https://github.com/Harry24k/adversarial-attacks-pytorch) for adversarial training
+  * [Pytorch-cnn-visualizations](https://github.com/utkuozbulak/pytorch-cnn-visualizations) for guided backpropagation
 
 Our experiment design flow is as follows:
 * Train the model and evaluate on test images, observe the saliency maps
@@ -42,7 +42,7 @@ Our experiment design flow is as follows:
 
 
 ## Repo Description
-The main code of our project is the following two files: `Robustness_Interpretability_MNIST_Final.ipynb` and `guided_backprop.py`. `guided_backprop.py` is the helper code that we borrowed from link(https://github.com/utkuozbulak/pytorch-cnn-visualizations) to compute guided backpropagation gradients. `Robustness_Interpretability_MNIST_Final.ipynb` is the main experimentation notebook, where we train two models (naturally and adversarially), generate adversarial images for testing, and compare the saliency maps for different images under different models.
+The main code of our project is the following two files: `Robustness_Interpretability_MNIST_Final.ipynb` and `guided_backprop.py`. `guided_backprop.py` is the helper code that we borrowed from [here](https://github.com/utkuozbulak/pytorch-cnn-visualizations) to compute guided backpropagation gradients. `Robustness_Interpretability_MNIST_Final.ipynb` is the main experimentation notebook, where we train two models (naturally and adversarially), generate adversarial images for testing, and compare the saliency maps for different images under different models.
 
 `results` stores the resulting picture maps that we plot during the experiment.
 
